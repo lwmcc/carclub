@@ -34,6 +34,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "CarClub"
 include(":app")
+include(":amplify")
+project(":amplify").projectDir = file("amplify")
 
 val filePath = settingsDir.parentFile.toString() + "/cerqa_flutter_module/.android/include_flutter.groovy"
 apply(from = File(filePath))
