@@ -72,6 +72,9 @@ android {
 
 dependencies {
 
+    // Shared KMP module
+    implementation(project(":shared"))
+
     implementation(libs.androidx.ui.tooling.preview.android)
     implementation(libs.firebase.messaging.ktx)
     implementation(libs.play.services.auth)

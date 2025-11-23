@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.android.kotlin.multiplatform.library)
     id("org.jetbrains.kotlin.plugin.compose") version "2.2.0"
     id("org.jetbrains.compose") version "1.8.2"
+    kotlin("plugin.serialization") version "2.1.0"
 }
 
 kotlin {
@@ -76,6 +77,15 @@ kotlin {
                 implementation(libs.koin.core)
                 implementation(libs.koin.core)
                 implementation(libs.koin.androidx.compose)
+
+                // Coroutines
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
+
+                // Serialization
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+
+                // DateTime
+                implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.5.0")
             }
         }
 
